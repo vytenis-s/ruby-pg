@@ -88,11 +88,6 @@
 #	include "ruby/io.h"
 #endif
 
-#ifdef RUBINIUS
-	/* Workaround for wrong FIXNUM_MAX definition */
-	typedef intptr_t native_int;
-#endif
-
 #ifndef RETURN_SIZED_ENUMERATOR
 	#define RETURN_SIZED_ENUMERATOR(obj, argc, argv, size_fn) RETURN_ENUMERATOR((obj), (argc), (argv))
 #endif
